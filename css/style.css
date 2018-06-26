@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  display: block;
+}
+body {
+  font-family: Verdana, sans-serif;
+  background: #4f5b66;
+  font-weight: bold;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+
+/* немного для гармошки*/
+.accordion-menu {
+  width: 100%;
+}
+.accordion-menu li.open .dropdownlink {
+  /* color: #222222;    это свойство меняет цвет текста в меню при открытии гармошки*/
+}
+.accordion-menu li.open .dropdownlink .fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.accordion-menu li:last-child .dropdownlink {
+  border-bottom: 0;
+}
+
+/* Для работы гармошки*/
+.tabs { 
+  display: none;
+}
+
+/* меню в гармошке*/
+.dropdownlink {
+  background: #afb5c0;   /*без градиента*/
+  background: linear-gradient(to right, rgba(131,140,147,1) 0%,rgba(167,173,178,1) 20%,rgba(184,189,193,1) 45%,rgba(202,205,209,1) 65%,rgba(202,205,209,1) 65%,rgba(219,222,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  cursor: pointer;
+  display: block;
+  padding: 10px 10px 10px 15px;
+  font-size: 13px;
+  /* color: #293038; если без градиента*/
+  color: #242b32;
+  position: relative;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  margin-top: 5px;
+  height: auto;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+}
+
+/* Стрелочки на меню в гармошке*/
+.dropdownlink i {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+.dropdownlink .fa-chevron-down {
+  right: 12px;
+  left: auto;
+}
+
+/* подменю в гармошке*/
+li.tab {
+  background: #343d46;
+  margin-top: 5px;
+}
+.tabs a {
+  display: block;
+  color: #dfe2e6;
+  font-size: 11px;
+  padding: 8px 20px 8px 20px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.tabs a:hover {
+  background: #485058;
+  color: #dfe2e6;
+}
+
+/* Для работы вкладок*/
+.tab_content {
+    display: none;
+}
+.tab_content.active {
+    display: block;
+}
+
+
+
+
+/* Блоки */
+.header {
+  width: calc(100% - 365px);
+  height: auto;
+  float: right;
+  background: linear-gradient(to right, #343d46 0%,#343d46 50%,#4f5b66 80%,#4f5b66 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /*background: #343d46;*/
+  margin: 5px 5px 5px 0px;
+  padding: 10px 15px 12px 15px;
+  color: #dfe2e6;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  /*box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);*/
+  transition: width 0.2s;
+}
+
+.menu-button {
+  width: 300px;
+  height: auto;
+  float: left;
+  padding: 10px 10px 12px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background: #343d46;
+  color: #dfe2e6;
+  transition: width 0.2s;
+}
+
+.content {
+  background: #dfe2e6; /*без градиента*/
+  background: linear-gradient(to right, rgba(219,222,224,1) 1%,rgba(239,242,244,1) 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  float: right;
+  width: calc(100% - 335px);
+  height: calc(100vh - 55px);
+  padding: 0px 5px 0px -5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
+  position: relative;
+  transition: width 0.2s;
+}
+
+.sidebar {
+  width: 325px;
+  height: calc(100vh - 55px);
+  float: left;
+  overflow: auto;
+  left: 0px;
+  position: fixed;
+  transition: left 0.2s;
+  top: 50px;
+}
+
+
+iframe {
+  min-width: calc(100%);
+  min-height: calc(100vh - 65px);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Стрелочки на кнопке меню*/
+.menu-button i {
+  position: fixed;
+  top: 17px;
+  left: 294px;
+  transition: left 0.2s;
+}
+
+.menu-button p::selection {
+   background: transparent;
+}
+
+.dropdownlink p::selection {
+   background: transparent;
+}

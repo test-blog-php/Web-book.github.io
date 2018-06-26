@@ -1,0 +1,52 @@
+*{
+	font-family: Times, "Times New Roman", "serif";
+	color: #242b32 ;
+}
+p {
+    line-height: 1.5em; /* Межстрочный интервал */
+    margin-top: 0em; /* Отступ сверху */
+    margin-bottom: 0em; /* Отступ снизу */
+    text-indent: 2.5em; /* Отступ первой строки */
+  }
+  
+  .just {
+    text-align: justify;
+  }
+
+td {
+    padding: 1em;
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+	height: auto;
+  }
+td p {
+	    text-indent: 0em;
+}
+  
+  ol, ul {
+    margin-top: 0.25em; /* Отступ сверху */
+    margin-bottom: 0.7em; /* Отступ снизу */
+    color: #293038 ;
+  }
+
+li {
+	margin-top: 0.3em; /* Отступ сверху */
+    margin-bottom: 0.3em; /* Отступ снизу */
+	line-height: 1.5em; /* Межстрочный интервал */
+}
+
+td li {
+	text-align: left;
+}
+
+img {
+	align-items: center;
+	display: block;
+	max-width: 100%;
+	margin: 10px;
+}
+
+p img {
+	text-align: center;
+}
